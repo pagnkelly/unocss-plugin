@@ -1,0 +1,6 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "no-cond-assign": 0
+  }
+}
