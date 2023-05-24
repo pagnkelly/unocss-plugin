@@ -1,17 +1,76 @@
 <template>
-  <list></list>
+  <view class="text-size-4xl">DarkMode(支持)</view>
+  <view class="{{darkMode ? 'dark' : ''}}">
+    <view class="text-red-400 dark:text-green-400">{{ darkMode ? 'dark' : 'light' }}模式</view>
+     <view class="text-red-400 dark:text-green-400">media模式</view>
+    <view bindtap="darkTap">{{ darkMode ? '🌛' : '🌞' }}</view>
+    <list />
+  </view>
+  <view class="text-size-4xl">Interactivity</view>
+  <view class="text-size-2xl">Accent-color(不支持)</view>
+  <view class="accent-red-500">
+      <view>复选框： <checkbox value="cb" checked="true"/></view>
+      <view>单选框：<radio value="r1" checked="true"/></view>
+      <view>进度条：<progress percent="80" active stroke-width="3" /></view>
+  </view>
+  <view class="text-size-2xl">Appearance(不支持)</view>
+  <button class="appearance-none"> 按钮 </button>
+  <view class="text-size-2xl">Cursor(不支持)</view>
+  <view class="cursor-wait bg-red-500"> 按钮 </view>
+  <view class="text-size-2xl">Caret(不支持)</view>
+  <input class="caret-red-500 caret-opacity-30 m-3 border border-solid border-gray-500 p-2" />
+  <view class="text-size-2xl">Pointer Events(支持)</view>
+  <view>
+    <view bindtap="changePointerEvents('none')">none</view>
+    <view bindtap="changePointerEvents('auto')">auto</view>
+  </view>
+  <view class="{{poniterEvents === 'none' ? 'pointer-events-none' : 'pointer-events-auto' }}" bindtap="pointerToast">弹出toast</view>
+  <view class="text-size-2xl">Resize(不支持)</view>
+  <textarea class="resize bg-blue-500"/>
+  <view class="text-size-2xl">Touch Action(支持)</view>
+  <view class="touch-none bg-green-500 w-100% h-20" >滑动区域</view>
+  <view class="text-size-2xl">User Select(不支持)</view>
+  <view>你应该可以选中这段文本。</view>
+  <view class="select-none">嘿嘿，你不能选中这段文本！</view>
+  <view class="select-all">点击一次就会选中这段文本。</view>
 </template>
 
-<script>
-import { createPage } from '@mpxjs/core'
-
-createPage({
-  onLoad() {
-    //
-  }
+<script setup>
+import mpx, { ref } from '@mpxjs/core'
+const darkMode = ref(false)
+const darkTap = () => {
+  darkMode.value = !darkMode.value
+}
+const poniterEvents = ref('none')
+const changePointerEvents = (val) => {
+  poniterEvents.value = val
+}
+const pointerToast = () => {
+  mpx.showToast({
+    title: 'pointer-events', // 提示的内容,
+    icon: 'success', // 图标,
+    duration: 2000
+  })
+}
+defineExpose({
+  darkTap,
+  darkMode,
+  changePointerEvents,
+  poniterEvents,
+  pointerToast
 })
 </script>
 
+<style>
+@variants focus, hover {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+}
+</style>
 <script type="application/json">
   {
     "usingComponents": {

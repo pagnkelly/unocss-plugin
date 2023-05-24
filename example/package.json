@@ -17,6 +17,7 @@
     "@mpxjs/store": "^2.8.0",
     "@mpxjs/utils": "^2.8.0",
     "pinia": "^2.0.14",
+    "unocss": "^0.52.3",
     "vue": "^2.6.14",
     "vue-demi": "^0.13.11",
     "vue-i18n": "^8.27.2",
@@ -32,11 +33,12 @@
     "@mpxjs/eslint-config": "^1.0.5",
     "@mpxjs/mpx-cli-service": "^1.0.0",
     "@mpxjs/size-report": "^2.8.0",
+    "@mpxjs/unocss-plugin": "file:..",
     "@mpxjs/vue-cli-plugin-mpx": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-eslint": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-mp": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-web": "^1.0.0",
-    "@mpxjs/webpack-plugin": "^2.8.0",
+    "@mpxjs/webpack-plugin": "^2.8.32",
     "@vue/cli-service": "~5.0.0",
     "autoprefixer": "^10.2.4",
     "eslint": "^7.0.0",
@@ -44,8 +46,7 @@
     "stylus": "^0.55.0",
     "stylus-loader": "^6.1.0",
     "vue-template-compiler": "^2.6.14",
-    "webpack": "^5.43.0",
-    "@mpxjs/unocss-plugin": "file:.."
+    "webpack": "^5.43.0"
   },
   "browserslist": "ios >= 8, chrome >= 47"
 }
