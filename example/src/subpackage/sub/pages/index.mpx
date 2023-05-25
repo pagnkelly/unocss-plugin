@@ -1,0 +1,17 @@
+<template>
+  <view class="m-1 bg-blend-color flex-col-reverse p-1"></view>
+</template>
+
+<script>
+
+</script>
+
+<style lang="stylus">
+
+</style>
+
+<script type="application/json">
+  {
+    "usingComponents": {}
+  }
+</script>

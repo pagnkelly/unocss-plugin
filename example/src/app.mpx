@@ -19,6 +19,11 @@ createApp({
   {
     "pages": [
       "./pages/index"
+    ],
+    "packages": [
+      "./subpackage/sub/app.mpx?root=sub",
+      "./subpackage/sub2/app.mpx?root=sub2",
+      "./subpackage/sub3/app.mpx?root=sub3"
     ]
   }
 </script>
