@@ -38,7 +38,7 @@
     "@mpxjs/vue-cli-plugin-mpx-eslint": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-mp": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-web": "^1.0.0",
-    "@mpxjs/webpack-plugin": "^2.8.32",
+    "@mpxjs/webpack-plugin": "2.8.28-beta.3",
     "@vue/cli-service": "~5.0.0",
     "autoprefixer": "^10.2.4",
     "eslint": "^7.0.0",

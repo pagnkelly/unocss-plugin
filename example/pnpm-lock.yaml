@@ -20,7 +20,7 @@ specifiers:
   '@mpxjs/vue-cli-plugin-mpx-eslint': ^1.0.0
   '@mpxjs/vue-cli-plugin-mpx-mp': ^1.0.0
   '@mpxjs/vue-cli-plugin-mpx-web': ^1.0.0
-  '@mpxjs/webpack-plugin': ^2.8.32
+  '@mpxjs/webpack-plugin': 2.8.28-beta.3
   '@vue/cli-service': ~5.0.0
   autoprefixer: ^10.2.4
   eslint: ^7.0.0
@@ -60,13 +60,13 @@ devDependencies:
   '@mpxjs/babel-plugin-inject-page-events': 2.8.1
   '@mpxjs/eslint-config': 1.0.10_eslint@7.32.0
   '@mpxjs/mpx-cli-service': 1.6.30_8fab6c83c4c569ccc7372378712a3036
-  '@mpxjs/size-report': 2.8.19_@mpxjs+webpack-plugin@2.8.32
+  '@mpxjs/size-report': 2.8.19_3a3d3a13f6de1dfa30e13c211fd443a9
   '@mpxjs/unocss-plugin': link:..
-  '@mpxjs/vue-cli-plugin-mpx': 1.6.30_b353c600e58a1cc5baa7caae1ff37a89
+  '@mpxjs/vue-cli-plugin-mpx': 1.6.30_5871b51482feb2e484479e909ea5827e
   '@mpxjs/vue-cli-plugin-mpx-eslint': 1.6.30_eslint@7.32.0+webpack@5.83.1
-  '@mpxjs/vue-cli-plugin-mpx-mp': 1.6.30_236dff734d8ac4f62ce3774880a0ad8b
-  '@mpxjs/vue-cli-plugin-mpx-web': 1.6.30_5bfdafb1c7aa641d199166fc440bb28d
-  '@mpxjs/webpack-plugin': 2.8.32_webpack@5.83.1
+  '@mpxjs/vue-cli-plugin-mpx-mp': 1.6.30_61b9abebf6fec00ef7cbb8217fab9b7b
+  '@mpxjs/vue-cli-plugin-mpx-web': 1.6.30_9b99c85e850850fa2ef9c91b74a63b11
+  '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
   '@vue/cli-service': 5.0.8_8fab6c83c4c569ccc7372378712a3036
   autoprefixer: 10.4.14_postcss@8.4.23
   eslint: 7.32.0
@@ -1570,12 +1570,12 @@ packages:
       vue-demi: 0.13.11_vue@2.7.14
     dev: false
 
-  /@mpxjs/size-report/2.8.19_@mpxjs+webpack-plugin@2.8.32:
+  /@mpxjs/size-report/2.8.19_3a3d3a13f6de1dfa30e13c211fd443a9:
     resolution: {integrity: sha512-REH8AxE3KeQgsLRI8Yx8yace/s/XKBpznSGcGi3R7wiKlXGFWGP56ukwLOGyaFH8und13s8E5US6bYl12kgKGg==}
     peerDependencies:
       '@mpxjs/webpack-plugin': ^2.8.0
     dependencies:
-      '@mpxjs/webpack-plugin': 2.8.32_webpack@5.83.1
+      '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
       ejs: 3.1.9
       express: 4.18.2
       loader-utils: 2.0.4
@@ -1612,7 +1612,7 @@ packages:
       - webpack
     dev: true
 
-  /@mpxjs/vue-cli-plugin-mpx-mp/1.6.30_236dff734d8ac4f62ce3774880a0ad8b:
+  /@mpxjs/vue-cli-plugin-mpx-mp/1.6.30_61b9abebf6fec00ef7cbb8217fab9b7b:
     resolution: {integrity: sha512-DGuP10PXMvSs815cj85LoQaoy7+Qno/q8xE4e0N+MHoXXjrbbGsx5M6BwkZ9kAoCYyERfQpFhRWzAJn3FUR+MA==}
     peerDependencies:
       '@mpxjs/webpack-plugin': ^2.7.0
@@ -1631,8 +1631,8 @@ packages:
       stylus-loader:
         optional: true
     dependencies:
-      '@mpxjs/vue-cli-plugin-mpx': 1.6.30_b353c600e58a1cc5baa7caae1ff37a89
-      '@mpxjs/webpack-plugin': 2.8.32_webpack@5.83.1
+      '@mpxjs/vue-cli-plugin-mpx': 1.6.30_5871b51482feb2e484479e909ea5827e
+      '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
       '@soda/friendly-errors-webpack-plugin': 1.8.1_webpack@5.83.1
       '@vue/cli-shared-utils': 5.0.8
       copy-webpack-plugin: 9.1.0_webpack@5.83.1
@@ -1654,14 +1654,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@mpxjs/vue-cli-plugin-mpx-web/1.6.30_5bfdafb1c7aa641d199166fc440bb28d:
+  /@mpxjs/vue-cli-plugin-mpx-web/1.6.30_9b99c85e850850fa2ef9c91b74a63b11:
     resolution: {integrity: sha512-T16yXurvBzuNTYdo9vNdKUSr8zzQloOkktsHkMr8p8sRCqqXvHHvluxEN02SWa6hKiQ521xkboHhBRthvUi/8g==}
     peerDependencies:
       '@mpxjs/webpack-plugin': ^2.7.0
       webpack: ^5.48.0
     dependencies:
-      '@mpxjs/vue-cli-plugin-mpx': 1.6.30_b353c600e58a1cc5baa7caae1ff37a89
-      '@mpxjs/webpack-plugin': 2.8.32_webpack@5.83.1
+      '@mpxjs/vue-cli-plugin-mpx': 1.6.30_5871b51482feb2e484479e909ea5827e
+      '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
       '@vue/vue-loader-v15': /vue-loader/15.10.1_94b696cb49aa8fc954dbde58c1d6997b
       webpack: 5.83.1
     transitivePeerDependencies:
@@ -1672,13 +1672,13 @@ packages:
       - vue-template-compiler
     dev: true
 
-  /@mpxjs/vue-cli-plugin-mpx/1.6.30_b353c600e58a1cc5baa7caae1ff37a89:
+  /@mpxjs/vue-cli-plugin-mpx/1.6.30_5871b51482feb2e484479e909ea5827e:
     resolution: {integrity: sha512-eFe/aSNOediLkyEHLm+QsZN/lJw9Yr+OcN1DoJlDLWHXwmT9uZ8g4O1Fe9xClZukwo5aX4gSnrWmF58qAWIRNw==}
     peerDependencies:
       '@mpxjs/webpack-plugin': ^2.7.0
       webpack: ^5.48.0
     dependencies:
-      '@mpxjs/webpack-plugin': 2.8.32_webpack@5.83.1
+      '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.3.0_a4fb97b1eb8366a986880d4cb53fc5f4
       webpack: 5.83.1
@@ -1689,8 +1689,8 @@ packages:
       - encoding
     dev: true
 
-  /@mpxjs/webpack-plugin/2.8.32_webpack@5.83.1:
-    resolution: {integrity: sha512-+DAaezbVVVaGyWCzmXKmajoCY2GManoQK5KN3HURTucgWhlPu3NMmuUcSR9sQWfa7DgQ49HCFKSAf/LakqaM9g==}
+  /@mpxjs/webpack-plugin/2.8.28-beta.3_webpack@5.83.1:
+    resolution: {integrity: sha512-KYzMafBvZ0E3VacfucWuWK6VxvVSDF+Gfvroj2a6C1YRay5UbTOD5s7YTY3WfY/9UzFf2zCbt33LhDrNeu12Mw==}
     engines: {node: '>=14.14.0'}
     peerDependencies:
       webpack: ^5.48.0
