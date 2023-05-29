@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pagnkelly/unocss-plugin#readme",
   "peerDependencies": {
+    "@unocss/webpack": "^0.52.4",
     "@mpxjs/webpack-plugin": "2.8.28-beta.3",
     "webpack": "^5.83.1"
   },

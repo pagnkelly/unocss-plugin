@@ -21,6 +21,7 @@ specifiers:
   '@mpxjs/vue-cli-plugin-mpx-mp': ^1.0.0
   '@mpxjs/vue-cli-plugin-mpx-web': ^1.0.0
   '@mpxjs/webpack-plugin': 2.8.28-beta.3
+  '@unocss/webpack': ^0.52.4
   '@vue/cli-service': ~5.0.0
   autoprefixer: ^10.2.4
   eslint: ^7.0.0
@@ -45,7 +46,7 @@ dependencies:
   '@mpxjs/store': 2.8.15_@mpxjs+core@2.8.32
   '@mpxjs/utils': 2.8.15_@mpxjs+core@2.8.32
   pinia: 2.1.3_vue@2.7.14
-  unocss: 0.52.3
+  unocss: 0.52.3_@unocss+webpack@0.52.4
   vue: 2.7.14
   vue-demi: 0.13.11_vue@2.7.14
   vue-i18n: 8.28.2
@@ -67,6 +68,7 @@ devDependencies:
   '@mpxjs/vue-cli-plugin-mpx-mp': 1.6.30_61b9abebf6fec00ef7cbb8217fab9b7b
   '@mpxjs/vue-cli-plugin-mpx-web': 1.6.30_9b99c85e850850fa2ef9c91b74a63b11
   '@mpxjs/webpack-plugin': 2.8.28-beta.3_webpack@5.83.1
+  '@unocss/webpack': 0.52.4_webpack@5.83.1
   '@vue/cli-service': 5.0.8_8fab6c83c4c569ccc7372378712a3036
   autoprefixer: 10.4.14_postcss@8.4.23
   eslint: 7.32.0
@@ -103,7 +105,6 @@ packages:
 
   /@antfu/utils/0.7.2:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
-    dev: false
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
@@ -1782,7 +1783,6 @@ packages:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
-    dev: false
 
   /@sideway/address/4.1.4:
     resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
@@ -2008,9 +2008,21 @@ packages:
       unconfig: 0.3.9
     dev: false
 
+  /@unocss/config/0.52.4:
+    resolution: {integrity: sha512-Yn87KQ4ctFXY36pgKJIimlhjqdx5gjKorVyrA4rzmsEV0Mwtt3+SQoB5tSFdGb4/VWKjymlBXfbNso89oTRY1g==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.52.4
+      unconfig: 0.3.9
+    dev: true
+
   /@unocss/core/0.52.3:
     resolution: {integrity: sha512-AdpksuSj1+jAjF7Ek1Ubtt+pE/bi4EmVqz/sx7PTgp9RUyBX1457kDlSWJPFOvEEkKL8VLtwXB46hD2oPAp36Q==}
     dev: false
+
+  /@unocss/core/0.52.4:
+    resolution: {integrity: sha512-pST/IqzgV05BdIJU/oZ4F6wN6wotYbOGGnuYohanq0qHy/gflCicR7PkGIzZNGerHf0FaRnM7OOEzsPGxe7BMg==}
+    dev: true
 
   /@unocss/extractor-arbitrary-variants/0.52.3:
     resolution: {integrity: sha512-dEDQ9mfwlS/aC420iRO6wUT1p0z2WBH5nupTdVgrU9Wjtff+NmLaas78skN+GPE5FCPXgKTJJsaDX6+etc/hrw==}
@@ -2152,6 +2164,25 @@ packages:
     transitivePeerDependencies:
       - rollup
     dev: false
+
+  /@unocss/webpack/0.52.4_webpack@5.83.1:
+    resolution: {integrity: sha512-T/UmXjKCCmLjn4V8JabVdBljcZ+zddFTJU9lqlTCNk0AHGQtMADGlRxcidTjfcX/uuyqq+/DBWu1yP+B9Uqffg==}
+    peerDependencies:
+      webpack: ^4 || ^5
+    dependencies:
+      '@ampproject/remapping': 2.2.1
+      '@rollup/pluginutils': 5.0.2
+      '@unocss/config': 0.52.4
+      '@unocss/core': 0.52.4
+      chokidar: 3.5.3
+      fast-glob: 3.2.12
+      magic-string: 0.30.0
+      unplugin: 1.3.1
+      webpack: 5.83.1
+      webpack-sources: 3.2.3
+    transitivePeerDependencies:
+      - rollup
+    dev: true
 
   /@vue/cli-overlay/5.0.8:
     resolution: {integrity: sha512-KmtievE/B4kcXp6SuM2gzsnSd8WebkQpg3XaB6GmFh1BJGRqa1UiW9up7L/Q67uOdTigHxr5Ar2lZms4RcDjwQ==}
@@ -3487,7 +3518,6 @@ packages:
 
   /defu/6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
-    dev: false
 
   /depd/1.1.2:
     resolution: {integrity: sha512-7emPTl6Dpo6JRXOXjLRxck+FlLRX5847cLKEn00PLAgc3g2hTZZgr+e4c2v6QpSmLeFP3n5yUo7ft6avBK/5jQ==}
@@ -4003,7 +4033,6 @@ packages:
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
-    dev: false
 
   /esutils/2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
@@ -4944,7 +4973,6 @@ packages:
   /jiti/1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
     hasBin: true
-    dev: false
 
   /joi/17.9.2:
     resolution: {integrity: sha512-Itk/r+V4Dx0V3c7RLFdRh12IOjySm2/WGPMubBT92cQvRfYZhPM2W0hZlctjj72iES8jsRCwp7S/cRmWBnJ4nw==}
@@ -5205,7 +5233,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: false
 
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -7201,7 +7228,6 @@ packages:
       '@antfu/utils': 0.7.2
       defu: 6.1.2
       jiti: 1.18.2
-    dev: false
 
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -7231,7 +7257,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss/0.52.3:
+  /unocss/0.52.3_@unocss+webpack@0.52.4:
     resolution: {integrity: sha512-BgL3kbxwt839t0ojo/j+i8xU4qu+fyV34SJOMQuFhLu6xkPNepvr6uPeipzNDajR7EZP3Q+jXJT9AWLKLLg1jw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -7260,6 +7286,7 @@ packages:
       '@unocss/transformer-directives': 0.52.3
       '@unocss/transformer-variant-group': 0.52.3
       '@unocss/vite': 0.52.3
+      '@unocss/webpack': 0.52.4_webpack@5.83.1
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -7269,6 +7296,15 @@ packages:
   /unpipe/1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /unplugin/1.3.1:
+    resolution: {integrity: sha512-h4uUTIvFBQRxUKS2Wjys6ivoeofGhxzTe2sRWlooyjHXVttcVfV/JiavNd3d4+jty0SVV0dxGw9AkY9MwiaCEw==}
+    dependencies:
+      acorn: 8.8.2
+      chokidar: 3.5.3
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.5.0
     dev: true
 
   /update-browserslist-db/1.0.11_browserslist@4.21.5:
@@ -7630,6 +7666,10 @@ packages:
 
   /webpack-virtual-modules/0.4.6:
     resolution: {integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==}
+    dev: true
+
+  /webpack-virtual-modules/0.5.0:
+    resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
     dev: true
 
   /webpack/5.83.1:
