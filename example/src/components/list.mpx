@@ -1,6 +1,6 @@
 <template>
   <view class="list {{ true ? 'p-10' : 'p-9' }}">
-    <view class="text-red-400 dark:text-green-400" wx:for="{{listData}}" wx:key="*this">{{item}}</view>
+    <view class="text-red-400 dark:text-green-400"  text-size-3xl wx:for="{{listData}}" wx:key="*this">{{item}}</view>
   </view>
 </template>
 

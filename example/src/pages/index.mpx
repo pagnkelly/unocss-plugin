@@ -62,14 +62,7 @@ defineExpose({
 </script>
 
 <style>
-@variants focus, hover {
-  .rotate-0 {
-    transform: rotate(0deg);
-  }
-  .rotate-90 {
-    transform: rotate(90deg);
-  }
-}
+
 </style>
 <script type="application/json">
   {
