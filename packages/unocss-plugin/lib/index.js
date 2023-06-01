@@ -239,6 +239,7 @@ class MpxUnocssPlugin {
           const output = unores.css
           if (!output || output.length <= 0) {
             error(`${file} 解析style错误,检查样式文件输入!`)
+            assets[file] = getRawSource(content)
             return
           }
           assets[file] = getRawSource(output)
@@ -333,7 +334,7 @@ class MpxUnocssPlugin {
         Object.assign(mainClassesMap, commonClassesMap)
         // 生成主包windi.css
         let mainWindiFile
-        const mainWindiFileContent = await this.generateStyle(uno, mainClassesMap, Object.assign(preflightOptions, { preflights: config.preflights }))
+        const mainWindiFileContent = await this.generateStyle(uno, mainClassesMap, Object.assign(preflightOptions, { preflights: true }))
         if (mainWindiFileContent) {
           mainWindiFile = this.options.windiFile + styleExt
           if (assets[mainWindiFile])

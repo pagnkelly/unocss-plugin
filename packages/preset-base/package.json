@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.3",
+    "eslint": "^8.41.0"
+  },
+  "name": "@mpxjs/unocss-base",
+  "description": "mpx unocss base preset",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagnkelly/unocss-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pagnkelly/unocss-base/issues"
+  },
+  "homepage": "https://github.com/pagnkelly/unocss-base#readme",
+  "dependencies": {
+    "@unocss/core": "^0.52.7",
+    "@unocss/preset-uno": "^0.52.7"
+  }
+}
