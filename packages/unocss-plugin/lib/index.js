@@ -334,7 +334,7 @@ class MpxUnocssPlugin {
         Object.assign(mainClassesMap, commonClassesMap)
         // 生成主包windi.css
         let mainWindiFile
-        const mainWindiFileContent = await this.generateStyle(uno, mainClassesMap, Object.assign(preflightOptions, { preflights: true }))
+        const mainWindiFileContent = await this.generateStyle(uno, mainClassesMap, { ...preflightOptions, preflights: true })
         if (mainWindiFileContent) {
           mainWindiFile = this.options.windiFile + styleExt
           if (assets[mainWindiFile])
