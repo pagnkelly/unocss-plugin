@@ -1,7 +1,6 @@
 {
   "name": "example",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "mpx-cli-service serve:mp",
     "build": "mpx-cli-service build:mp",
@@ -33,7 +32,8 @@
     "@mpxjs/eslint-config": "^1.0.5",
     "@mpxjs/mpx-cli-service": "^1.0.0",
     "@mpxjs/size-report": "^2.8.0",
-    "@mpxjs/unocss-plugin": "file:..",
+    "@mpxjs/unocss-plugin": "workspace:*",
+    "@mpxjs/unocss-base": "workspace:*",
     "@mpxjs/vue-cli-plugin-mpx": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-eslint": "^1.0.0",
     "@mpxjs/vue-cli-plugin-mpx-mp": "^1.0.0",
