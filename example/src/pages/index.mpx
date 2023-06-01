@@ -62,7 +62,9 @@ defineExpose({
 </script>
 
 <style>
-
+.a {
+  color: 1
+}
 </style>
 <script type="application/json">
   {
