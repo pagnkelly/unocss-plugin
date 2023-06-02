@@ -172,7 +172,7 @@ class MpxUnocssPlugin {
     const mpxPluginInstance = getPlugin(compiler, MpxWebpackPlugin)
     if (!mpxPluginInstance) {
       const logger = compiler.getInfrastructureLogger(PLUGIN_NAME)
-      logger.error(new Error('@mpxjs/windicss-plugin需要与@mpxjs/webpack-plugin配合使用，请检查!'))
+      logger.error(new Error('@mpxjs/unocss-plugin需要与@mpxjs/webpack-plugin配合使用，请检查!'))
       return
     }
     const mode = this.mode = mpxPluginInstance.options.mode
@@ -239,7 +239,6 @@ class MpxUnocssPlugin {
           const output = unores.css
           if (!output || output.length <= 0) {
             error(`${file} 解析style错误,检查样式文件输入!`)
-            assets[file] = getRawSource(content)
             return
           }
           assets[file] = getRawSource(output)
