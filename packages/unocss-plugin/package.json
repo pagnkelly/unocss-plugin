@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/pagnkelly/unocss-plugin#readme",
   "peerDependencies": {
-    "@unocss/webpack": "^0.52.4",
     "@mpxjs/webpack-plugin": "2.8.28-beta.3",
+    "@unocss/webpack": "^0.52.4",
     "webpack": "^5.83.1"
   },
   "dependencies": {
+    "hash-sum": "^2.0.0",
     "minimatch": "^9.0.1",
     "unocss": "^0.52.0"
   },

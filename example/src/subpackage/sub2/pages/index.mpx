@@ -1,5 +1,5 @@
 <template>
-  <view class="m-1 bg-blend-color"></view>
+  <view class="m-1 bg-blend-color s-1"></view>
 </template>
 
 <script>

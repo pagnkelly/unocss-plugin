@@ -76,7 +76,7 @@ function transformGroups(source) {
   return source
 }
 
-const hasDirectiveTest = /@(apply|variants|screen|layer)\s/
+const hasDirectiveTest = /@(apply|screen|layer)\s/
 const hasThemeFunctionTest = /theme\(.*?\)/
 
 function cssRequiresTransform(source) {
