@@ -102,14 +102,22 @@ function createContext(root, defaults = {}) {
   let rawConfig = {}
   const uno = core.createGenerator(rawConfig, defaults)
 
-  async function loadConfig() {
+  async function loadConfig(compilation) {
     const result = await unoConfig.loadConfig(root, {}, [], {})
     rawConfig = result.config
     uno.setConfig(rawConfig)
+
+    if (result.sources.length) {
+      result.sources.forEach((item) => {
+        compilation.fileDependencies.add(item)
+        // fix jiti require cache for watch
+        delete require.cache[item]
+      })
+    }
     return result
   }
-  async function getConfig() {
-    await loadConfig()
+  async function getConfig(compilation) {
+    await loadConfig(compilation)
     return rawConfig
   }
   return {
@@ -209,7 +217,7 @@ class MpxUnocssPlugin {
         const warn = (msg) => {
           compilation.warnings.push(new Error(msg))
         }
-        const config = await getConfig()
+        const config = await getConfig(compilation)
 
         const enablePreflight = config.preflight !== false && Boolean(this.options.preflight)
 

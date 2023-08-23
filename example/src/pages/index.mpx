@@ -62,8 +62,8 @@ defineExpose({
 </script>
 
 <style>
-.a {
-  color: 1
+.custom-div {
+  @apply text-center my-0 font-medium;
 }
 </style>
 <script type="application/json">
