@@ -22,7 +22,10 @@
     "webpack": "^5.83.1"
   },
   "dependencies": {
+    "@ampproject/remapping": "^2.2.1",
+    "@unocss/transformer-directives": "^0.55.2",
     "hash-sum": "^2.0.0",
+    "magic-string": "^0.30.3",
     "minimatch": "^9.0.1",
     "unocss": "^0.52.0"
   },

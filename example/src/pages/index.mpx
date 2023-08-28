@@ -62,8 +62,21 @@ defineExpose({
 </script>
 
 <style>
+/** @unocss-ignore */
 .custom-div {
   @apply text-center my-0 font-medium;
+}
+.btn-blue {
+  background-color: theme('colors.blue.500');
+}
+.grid {
+  --uno: grid grid-cols-2;
+}
+
+@screen sm {
+  .grid {
+    --uno: grid-cols-3;
+  }
 }
 </style>
 <script type="application/json">

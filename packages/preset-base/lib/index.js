@@ -1,5 +1,4 @@
 import { presetUno } from '@unocss/preset-uno'
-import transformerDirectives from '@unocss/transformer-directives'
 import theme from './theme'
 
 export function presetBase(options = { preflight: false }) {
@@ -11,8 +10,5 @@ export function presetBase(options = { preflight: false }) {
       ...uno.theme,
       ...theme,
     },
-    transformers: [
-      transformerDirectives(),
-    ],
   }
 }

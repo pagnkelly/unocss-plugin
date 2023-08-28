@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "mpx-cli-service serve:mp",
+    "ali": "mpx-cli-service build:mp --targets=ali",
     "build": "mpx-cli-service build:mp",
     "lint": "eslint --ext .js,.ts,.mpx src/",
     "build:web": "mpx-cli-service build:web",
